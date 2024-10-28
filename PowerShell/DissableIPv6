@@ -1,0 +1,3 @@
+Get-NetAdapterBinding | 
+   Where-Object {$_.ComponentID -EQ 'ms_tcpip6'-and $_.Enabled -eq $true -and $_.Name -clike "OpenVPN "} #| 
+      Disable-NetAdapterBinding -ComponentID 'ms_tcpip6'
